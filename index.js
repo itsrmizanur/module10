@@ -35,3 +35,18 @@ function findMax (a) {
     return max;
 }
 console.log("3. Max number of array: " + findMax(arr));
+
+
+// 4) Write a function named ‘reverseString’ that takes a string and returns the string reversed.
+
+
+const str = "abc def ghi jkl";
+function reverseString (s) {
+    revStr = "";
+    for(let i = s.length - 1; i >= 0; i--) {
+        revStr = revStr + s[i];
+    }
+    return revStr;
+}
+
+console.log("4. ReverseString: " + reverseString(str));
