@@ -23,7 +23,7 @@ console.log("2. isEven: " + isEven(55));
 
 // 3) Write a function named ‘findMax’ that takes an array of numbers and returns the largest number in the array.
 
-const arr = [22,44,21,3,65,76,23,99,64,34,11,6,8,34];
+const arr = [22, 44, 21, 3, 65, 67, 93, 35, 76,23, 99, 64, 34, 11, 6, 8, 34];
 function findMax (a) {
     let max = a[0];
 
@@ -50,3 +50,65 @@ function reverseString (s) {
 }
 
 console.log("4. ReverseString: " + reverseString(str));
+
+// 5) Write a function named ‘filterOddNumbers’ that takes an array of numbers and returns a new array containing only the odd numbers.
+
+function filterOddNumbers ( a ) {
+    let oddNumbers = [];
+
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] % 2 == 1) {
+            oddNumbers.push(a[i]);
+        }
+    }
+    return oddNumbers;
+} 
+console.log("5. Odd Numbers: " +  filterOddNumbers( arr));
+
+
+// 6) Write a function named ‘sumArray’ that takes an array of numbers and returns the sum of all elements.
+
+function sumArray ( a ) {
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i]
+    }
+    return sum;
+}
+console.log("6. Sum: " + sumArray(arr));
+
+// 7) Write a function named ‘sortArray’ that takes an array of numbers and returns a new array sorted in ascending order.
+
+function sortArray ( a ) {
+    let i, j;
+    for(i = 0; i < a.length; i++) {
+        for(j = 0; j < a.length; j++) {
+            if(a[i] < a[j]) {
+                let temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+
+    return a;
+}
+
+console.log("7. Sorted array: " + sortArray(arr));
+
+
+// 8) Write a function named ‘capitalizeFirstLetter’ that takes a string and returns the same string with the first letter capitalized. Ex-  console.log(capitalizeFirstLetter("hello"));  // Output:  "Hello"
+
+function capitalizeFirstLetter ( str ) {
+    let char = str[0];
+    if(char >= 'a' && char <= 'z') {
+        char = char.toUpperCase();
+    }
+    for(let i = 1; i < str.length; i++) {
+        char = char + str[i];
+    }
+
+    return char;
+}
+
+console.log("8. 1st letter uppercase: " + capitalizeFirstLetter("hello"));
